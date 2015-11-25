@@ -49,6 +49,8 @@ function connect(mapStateToProps = defaultMapStateToProps, mapDispatchToProps = 
         const setDispatchProps = (id, dispatchProps) => connectRegistry[id].dispatchProps = dispatchProps;
 
         const ConnectedComponent = {
+            name: Component.name,
+            
             propTypes: {
                 store: { source: 'store' },
                 storeState: { source: 'storeState' }
